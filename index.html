@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra bag project</title>
+</head>
+<body>
+    <div style="padding:10px;">
+     <button style="   
+      height: 76px;
+     width: 277px;
+     font-size: 37px;
+     border: none;
+     border-radius: 5px;
+     background-color: aqua;" onclick="cartquantity = cartquantity +1;
+      document.querySelector ('#cart-SUMMARY').innerText = `You have been  ${cartquantity} carts.`
+     ">Add to bag</button>
+     
+     <button style="height: 79px;
+     font-size: 47px;
+     margin-left: 98px;
+     width: 381px;
+     border: 2px solid;" onclick="cartquantity = cartquantity -1;
+      document.querySelector ('#cart-SUMMARY').innerText = `You have been  ${cartquantity} carts.`
+     ">
+
+     <img style="height: 49px;
+    margin-top: 5px;
+    background: red;" src="data:image/png;base64,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" alt=""> Whislists</button>
+    <button style="
+    height: 76px;
+    width: 390px;
+    font-size: 37px;
+    border: none;
+    margin-left: 102px;
+    border-radius: 36px;
+    background-color: aqua;" onclick="cartquantity = cartquantity +2;
+      document.querySelector ('#cart-SUMMARY').innerText = `You have been  ${cartquantity} carts.`
+     ">Add 1+ 1 sale items</button></div>
+
+<h1  style="font-size: 90px;" id="cart-SUMMARY"></h1>
+
+
+
+
+<script>
+    let cartquantity = 0;
+    document.querySelector ('#cart-SUMMARY').innerText = `You have been  ${cartquantity} carts.`;
+</script>    
+</body>
+</html>
